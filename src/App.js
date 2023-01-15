@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useEffect, useState } from "react";
 import Weather from './components/Weather';
+import LoadScreen from './components/LoadScreen';
 function App() {
 
   const [lat, setLat] = useState([]);
@@ -27,7 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      {typeof data.main !== 'undefined' ? <Weather data={data} /> : null}
+      {typeof data.main !== 'undefined' ? <Weather data={data} /> : <LoadScreen />}
     </div>
   );
 }
