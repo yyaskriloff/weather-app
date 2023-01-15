@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-
+      {typeof data.main !== 'undefined' ? <Weather data={data} /> : null}
     </div>
   );
 }
